@@ -150,19 +150,19 @@ df = pd.read_csv("Apple_price_to_clean.csv")
 # print(df)
 
 
-data = {
-    'Item': ['Monitor', 'Air Conditioner', 'Blender', 'Dishwasher', 'Toaster'],
-    'Price': [350, 750, 60, 700, 100]  
-}
-df = pd.DataFrame(data)
-print(df)
-Q1 = df['Price'].quantile(0.25)
-Q3 = df['Price'].quantile(0.75)
-IQR = Q3 - Q1
-lower_bound = Q1 - 1.5 * IQR
-upper_bound = Q3 + 1.5 * IQR
-df_no_outliers = df[(df['Price'] >= lower_bound) & (df['Price'] <= upper_bound)]
-print(df_no_outliers)
+# data = {
+#     'Item': ['Monitor', 'Air Conditioner', 'Blender', 'Dishwasher', 'Toaster'],
+#     'Price': [350, 750, 60, 700, 100]  
+# }
+# df = pd.DataFrame(data)
+# print(df)
+# Q1 = df['Price'].quantile(0.25)
+# Q3 = df['Price'].quantile(0.75)
+# IQR = Q3 - Q1
+# lower_bound = Q1 - 1.5 * IQR
+# upper_bound = Q3 + 1.5 * IQR
+# df_no_outliers = df[(df['Price'] >= lower_bound) & (df['Price'] <= upper_bound)]
+# print(df_no_outliers)
 
 
 # data = {
